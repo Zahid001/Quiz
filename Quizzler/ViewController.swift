@@ -67,13 +67,23 @@ class ViewController: UIViewController {
         if sender.tag == 1{
             if question.list[questionNumber].answer {
                 score = score+1
+                ProgressHUD.showSuccess("Right")
+            }
+            else{
+                ProgressHUD.showError("Wrong")
             }
         }
         if sender.tag == 2{
             if !question.list[questionNumber].answer {
                 score = score+1
+                ProgressHUD.showSuccess("Right")
+            }
+            else{
+                ProgressHUD.showError("Wrong")
             }
         }
+        
+        
     }
     
     
